@@ -377,6 +377,21 @@ halfTree(3)
 
 */
 
+const halfTree = function (n) {
+  let halftreeeArray = [];
+
+  for (let i = 0; i < n; i++) {
+    let ramo = "";
+    for (let j = 0; j <= i; j++) {
+      ramo = ramo + "*";
+    }
+    halftreeeArray.push(ramo);
+  }
+  return halftreeeArray;
+};
+
+// console.log(halfTree(25));
+
 /* ESERCIZIO 28
 Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -389,9 +404,39 @@ tree(3)
 
 */
 
+const tree = function (n) {
+  let treeeArray = [];
+
+  for (let i = 0; i < n; i++) {
+    let ramo = "";
+
+    for (let j = 0; j < 2 * i + 1; j++) {
+      ramo = ramo + "*";
+    }
+    treeeArray.push(ramo);
+  }
+  return treeeArray;
+};
+
+console.log(tree(10));
+
 /* ESERCIZIO 29
 Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+const isItPrime = function (n) {
+  if (n <= 1) {
+    return false;
+  }
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
+console.log(isItPrime(12));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
